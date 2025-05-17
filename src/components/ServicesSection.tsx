@@ -1,69 +1,83 @@
-
-import { Car, PlaneDeparture, Route, Briefcase, Map, Users } from "lucide-react";
-
-type Service = {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-};
+import React from "react";
+import { Plane, Car, Route, Users, Briefcase, MapPin } from "lucide-react";
 
 const ServicesSection = () => {
-  const services: Service[] = [
-    {
-      icon: <Car className="h-10 w-10" />,
-      title: "Local Taxi Service",
-      description: "Explore Pondicherry's beautiful streets and attractions with our punctual local taxi service."
-    },
-    {
-      icon: <PlaneDeparture className="h-10 w-10" />,
-      title: "Airport Transfer",
-      description: "Stress-free premium transfers to and from Chennai Airport with fixed rates and on-time service."
-    },
-    {
-      icon: <Route className="h-10 w-10" />,
-      title: "Outstation Trips",
-      description: "Comfortable and safe journeys to Chennai, Mahabalipuram, Thanjavur and other destinations."
-    },
-    {
-      icon: <Briefcase className="h-10 w-10" />,
-      title: "Car Rental",
-      description: "Flexible car rentals with experienced drivers for your daily travel needs."
-    },
-    {
-      icon: <Map className="h-10 w-10" />,
-      title: "Pondicherry Tours",
-      description: "Discover the French Quarter, Auroville, and local attractions with our curated tours."
-    },
-    {
-      icon: <Users className="h-10 w-10" />,
-      title: "Group Travel",
-      description: "Specialized vehicles for family trips, corporate outings, and group excursions."
-    }
-  ];
-
   return (
-    <section id="services" className="py-20 bg-white dark:bg-slate-900">
+    <section id="services" className="py-20 bg-gray-50 dark:bg-slate-800">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Premium Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Experience the finest transportation services in Pondicherry with our exceptional fleet and professional drivers
+            We offer a range of taxi services to meet all your transportation needs.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className="bg-gray-50 dark:bg-slate-800 rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center group"
-            >
-              <div className="mb-5 text-taxi-primary group-hover:scale-110 transition-transform duration-300">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
+          {/* Service Card 1 */}
+          <div className="bg-white dark:bg-slate-700 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="h-12 w-12 rounded-full bg-taxi-primary/20 text-taxi-primary flex items-center justify-center mb-4">
+              <Plane className="h-6 w-6" />
             </div>
-          ))}
+            <h3 className="text-xl font-semibold mb-2 dark:text-gray-50">Airport Transfers</h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Reliable and comfortable airport transfer services to get you to your destination on time.
+            </p>
+          </div>
+          
+          {/* Service Card 2 */}
+          <div className="bg-white dark:bg-slate-700 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="h-12 w-12 rounded-full bg-taxi-primary/20 text-taxi-primary flex items-center justify-center mb-4">
+              <Car className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 dark:text-gray-50">Outstation Trips</h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Explore nearby cities and attractions with our convenient outstation taxi services.
+            </p>
+          </div>
+          
+          {/* Service Card 3 */}
+          <div className="bg-white dark:bg-slate-700 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="h-12 w-12 rounded-full bg-taxi-primary/20 text-taxi-primary flex items-center justify-center mb-4">
+              <Route className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 dark:text-gray-50">Local City Rides</h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Quick and easy local rides within the city for your daily commute or errands.
+            </p>
+          </div>
+
+          {/* Service Card 4 */}
+          <div className="bg-white dark:bg-slate-700 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="h-12 w-12 rounded-full bg-taxi-primary/20 text-taxi-primary flex items-center justify-center mb-4">
+              <Users className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 dark:text-gray-50">Group Travel</h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Spacious and comfortable vehicles for group travel, ensuring everyone travels together.
+            </p>
+          </div>
+
+          {/* Service Card 5 */}
+          <div className="bg-white dark:bg-slate-700 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="h-12 w-12 rounded-full bg-taxi-primary/20 text-taxi-primary flex items-center justify-center mb-4">
+              <Briefcase className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 dark:text-gray-50">Corporate Travel</h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Dedicated corporate travel solutions for businesses, ensuring efficient and reliable transportation.
+            </p>
+          </div>
+
+          {/* Service Card 6 */}
+          <div className="bg-white dark:bg-slate-700 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="h-12 w-12 rounded-full bg-taxi-primary/20 text-taxi-primary flex items-center justify-center mb-4">
+              <MapPin className="h-6 w-6" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 dark:text-gray-50">Custom Packages</h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Tailored taxi packages to suit your specific travel needs and preferences.
+            </p>
+          </div>
         </div>
       </div>
     </section>

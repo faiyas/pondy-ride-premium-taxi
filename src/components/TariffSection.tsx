@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,6 +11,13 @@ import {
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
+import React from "react";
+import { 
+  Car, 
+  Users as UsersIcon, 
+  Briefcase as BriefcaseIcon,
+  Snowflake 
+} from "lucide-react";
 
 interface VehicleCard {
   name: string;
@@ -238,11 +244,11 @@ const TariffSection = () => {
                   <CardTitle className="text-xl mb-2">{vehicle.name}</CardTitle>
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center">
-                      <Users className="h-4 w-4 mr-2 text-taxi-primary" />
+                      <UsersIcon className="h-4 w-4 mr-2 text-taxi-primary" />
                       <span className="text-sm">{vehicle.capacity}</span>
                     </div>
                     <div className="flex items-center">
-                      <Briefcase className="h-4 w-4 mr-2 text-taxi-primary" />
+                      <BriefcaseIcon className="h-4 w-4 mr-2 text-taxi-primary" />
                       <span className="text-sm">{vehicle.luggage}</span>
                     </div>
                     <div className="text-taxi-primary font-semibold">₹{vehicle.rate}/km</div>
